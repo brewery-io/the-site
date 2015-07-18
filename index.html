@@ -1,0 +1,96 @@
+<!DOCTYPE html >
+
+<html >
+	<head >
+		<title >rafal stapinski</title>
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu+Mono" />
+		<link type="text/css" rel="stylesheet" href="css/screen.css" />
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" ></script>
+	</head>
+	<body >
+		<h2 ><span >hacker</span> &bull; <span >developer</span> &bull; <span >minimalist</span></h2>
+		<div class="main" >
+			<p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non leo id velit pulvinar rutrum id vel ex. Praesent accumsan elit nulla, et lacinia sem tincidunt quis. Nunc erat enim, accumsan in nisl in, tristique feugiat nulla. Quisque auctor condimentum commodo. Pellentesque aliquet, ex eget suscipit luctus, ligula leo dignissim tortor, nec egestas justo est in metus. Quisque porttitor convallis ex eu pharetra.</p>
+			<br />
+			<p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non leo id velit pulvinar rutrum id vel ex. Praesent accumsan elit nulla, et lacinia sem tincidunt quis. Nunc erat enim, accumsan in nisl in, tristique feugiat nulla. Quisque auctor condimentum commodo. Pellentesque aliquet, ex eget suscipit luctus, ligula leo dignissim tortor, nec egestas justo est in metus. Quisque porttitor convallis ex eu pharetra.</p>
+			<div class="bottom_bar" >
+				<div class="circle" id="projects" >
+					<div class="content" >
+						<span class="x" >&#x2715;</span>
+						<div class="project" >
+							<h3 >my projects - always more being added</h3>
+							<h4 >NewsMap</h4>
+							<a href="map" >
+								<img src="img/map.png" />
+							</a>
+							<p >This interactive map categorizes news articles (currently from NYT) into conflict, economic, and environment related news. It then plots them on the map, based on the amount, and where, the articles were written.</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="circle" id="contact" >
+					<div class="content" >
+						<div class="x" >&#x2715;</div>
+						<p >@ ......................... <a href="mailto:rafal@stapinski.co" >rafal@stapinski.co</a></p>
+						<p >t ............................ <a href="http://twitter.com/rafalstapinski" >@rafalstapinski</a></p>
+						<p >in ........................... <a href="https://www.linkedin.com/pub/rafal-stapinski/60/94b/182" >Rafal Stapinski</a></p>
+						<p >sk ................................ <a href="Skype:brewery.io" >brewery.io</a></p>
+						<p >git ............................... <a href="http://github.com/brewery-io" />brewery-io</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script >
+			$closed = true;
+			$('.circle').click(function() {
+				if ($closed) {
+					$closed = false;
+					$('.circle').hide();
+					$(this).show();
+					$(this).css({
+						'background-image': 'none',
+						'background-color': 'rgba(255,165,0,.97)',
+						'cursor': 'default'
+					});
+					$(this).children('.content').animate({
+						"margin-left": "+=1500px",
+						"margin-top": "+=1500px"
+					}).show();
+					$(this).animate({
+						"marginTop": "-=1500px",
+						"marginLeft": "-=1500px",
+						"height": "+=3000px",
+						"width": "+=3000px",
+						borderTopLeftRadius: 1500,
+						borderTopRightRadius: 1500,
+						borderBottomLeftRadius: 1500,
+						borderBottomRightRadius: 1500
+					});
+				}
+			});
+			$('.x').click(function() {
+				$(this).parent().animate({
+					"margin-left": "-=1500px",
+					"margin-top": "-=1500px"
+				});
+				$(this).parent().parent().animate({
+					"marginTop": "+=1500px",
+					"marginLeft": "+=1500px",
+					"height": "-=3000px",
+					"width": "-=3000px",
+					borderTopLeftRadius: 25,
+					borderTopRightRadius: 25,
+					borderBottomLeftRadius: 25,
+					borderBottomRightRadius: 25
+				}, function() {
+					$('.circle').removeAttr('style');
+					$('circle').show();
+					$closed = true;
+					$('.content').hide();
+				});
+			});
+		</script>
+	</body>
+</html>
