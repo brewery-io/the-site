@@ -10,23 +10,28 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" ></script>
 	</head>
 	<body >
+		<img src="img/me.png" />
 		<h2 ><span >hacker</span> &bull; <span >developer</span> &bull; <span >minimalist</span></h2>
 		<div class="main" >
-			<p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non leo id velit pulvinar rutrum id vel ex. Praesent accumsan elit nulla, et lacinia sem tincidunt quis. Nunc erat enim, accumsan in nisl in, tristique feugiat nulla. Quisque auctor condimentum commodo. Pellentesque aliquet, ex eget suscipit luctus, ligula leo dignissim tortor, nec egestas justo est in metus. Quisque porttitor convallis ex eu pharetra.</p>
+			<p >I'm a goal oriented person, and it's my goal to achieve what I put my mind to. What sets me aside from others is my ability to analyze a problem and come up with unique and elegant solutions.</p>
 			<br />
-			<p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non leo id velit pulvinar rutrum id vel ex. Praesent accumsan elit nulla, et lacinia sem tincidunt quis. Nunc erat enim, accumsan in nisl in, tristique feugiat nulla. Quisque auctor condimentum commodo. Pellentesque aliquet, ex eget suscipit luctus, ligula leo dignissim tortor, nec egestas justo est in metus. Quisque porttitor convallis ex eu pharetra.</p>
+			<p >I am currently enrolled in the Honors Program at Rutgers University where I study computer science and business.</p>
+			<br />
+			<p >For the past few years, I have applied my skills in web development as a freelance developer as well as an intern developer at Commvault. </p>
+			<br />
+			<p >I often take on side projects, as I enjoy the challenge of solving puzzles and making my ideas come to life. </p>
 			<div class="bottom_bar" >
 				<div class="circle" id="projects" >
 					<div class="content" >
 						<span class="x" >&#x2715;</span>
 						<div class="project" >
-							<h3 >my projects - always more being added</h3>
 							<h4 >NewsMap</h4>
-							<a href="map" >
+							<a href="p/mapnews" >
 								<img src="img/map.png" />
 							</a>
 							<p >This interactive map categorizes news articles (currently from NYT) into conflict, economic, and environment related news. It then plots them on the map, based on the amount, and where, the articles were written.</p>
 						</div>
+						<h4 >more being added, soon</h4>
 					</div>
 
 				</div>
@@ -38,6 +43,11 @@
 						<p >in ........................... <a href="https://www.linkedin.com/pub/rafal-stapinski/60/94b/182" >Rafal Stapinski</a></p>
 						<p >sk ................................ <a href="Skype:brewery.io" >brewery.io</a></p>
 						<p >git ............................... <a href="http://github.com/brewery-io" />brewery-io</a></p>
+						<p >btc ....... <a id="btc_a" href="#" >1ECaQNhJDvs1E2Y6DEEWdxRUy3Fn71KjUR</a></p>
+						<div id="btc_i" >
+							<div class="x" >&#x2715;</div>
+							<img src="img/btc.png" />
+						</div>
 					</div>
 				</div>
 			</div>
@@ -51,7 +61,7 @@
 					$(this).show();
 					$(this).css({
 						'background-image': 'none',
-						'background-color': 'rgba(255,165,0,.97)',
+						'background-color': 'rgba(255,165,0,.98)',
 						'cursor': 'default'
 					});
 					$(this).children('.content').animate({
@@ -70,7 +80,7 @@
 					});
 				}
 			});
-			$('.x').click(function() {
+			$('.content > .x').click(function() {
 				$(this).parent().animate({
 					"margin-left": "-=1500px",
 					"margin-top": "-=1500px"
@@ -90,6 +100,12 @@
 					$closed = true;
 					$('.content').hide();
 				});
+			});
+			$('#btc_a').click(function() {
+				$('#btc_i').show();
+			});
+			$('#btc_i > .x').click(function() {
+				$('#btc_i').hide();
 			});
 		</script>
 	</body>

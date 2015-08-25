@@ -2,11 +2,11 @@
 	margin:0px;
 }
 ::selection{
-	/*background-color:rgba(255,165,0,.2);*/
+	background-color:transparent;
 	color:orange;
 }
 ::-moz-selection{
-	/*background-color:rgba(255,165,0,.2);*/
+	background-color:transparent;
 	color:orange;
 }
 
@@ -15,9 +15,17 @@ body{
 	background-color:#fafafa;
 	color:#1f1f1f;
 	overflow:hidden;
+	height:1000px;
 }
+	body > img {
+		height:100px;
+		border-radius:54px;
+		border:4px solid orange;
+		margin-left:calc(50% - 50px);
+		margin-top:80px;
+	}
 	body h2{
-		margin-top:100px;
+		margin-top:20px;
 		text-align:center;
 
 	}
@@ -67,11 +75,11 @@ body{
 		body .main .circle .content > p:first-of-type{
 			margin-top:60px;
 		}
-		body .main .circle .content p::selection, .content p a::selection{
+		body .main .circle .content p::selection, .content p a::selection, .content h4::selection{
 			background-color:white;
 			color:white;
 		}
-		body .main .circle .content p::-moz-selection, .content p a::-moz-selection{
+		body .main .circle .content p::-moz-selection, .content p a::-moz-selection, .content h4::-moz-selection{
 			background-color:white;
 			color:white;
 		}
@@ -101,6 +109,10 @@ body{
 				body .main #projects .content .project p{
 					text-align:justify;
 				}
+			body .main #projects .content > h4 {
+				margin-top:20px;
+				text-align:center;
+			}
 	body .main #projects:hover{
 		background-image:url('../img/projects-open.png');
 	}
@@ -122,6 +134,9 @@ body{
 					color:white;
 					text-decoration:none;
 				}
+			body .main #contact .content #btc_i{
+				margin-left:calc(50% - 60px);
+			}
 	body .main #contact:hover{
 		background-image:url('../img/contact-open.png');
 	}
