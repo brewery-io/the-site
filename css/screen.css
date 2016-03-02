@@ -10,6 +10,13 @@
 	color:orange;
 }
 
+::-webkit-scrollbar{
+    background-color:rgba(256, 256, 256, .3);
+}
+::-webkit-scrollbar-thumb{
+    background-color:white;
+}
+
 body{
 	font-family:"Ubuntu Mono";
 	background-color:#fafafa;
@@ -31,9 +38,10 @@ body{
 		user-select:none;*/
 	}
 	body h2{
-		margin-top:20px;
+		margin-top:10px;
 		text-align:center;
-
+        font-size:24px;
+        text-align:center;
 	}
 	body h2 span:hover{
 		border-bottom:2px dotted orange;
@@ -41,6 +49,10 @@ body{
 	body .main::selection{
 		background-color:transparent;
 	}
+    body .container{
+        padding-bottom:20px;
+        overflow:hidden;
+    }
 	body .main{
 		width:394px;
 		margin-left:0px;
@@ -52,8 +64,16 @@ body{
 		line-height:20px;
 		text-align:justify;
 	}
+        body .main p a{
+            color:#1f1f1f;
+            text-decoration:none;
+        }
+    body .main .bottom_bar{
+        margin-top:20px;
+        height:50px;
+        width:100%;
+    }
 	body .main .circle{
-		margin-top:20px;
 		display:inline-block;
 		height:50px;
 		width:50px;
@@ -66,19 +86,30 @@ body{
 		-webkit-transition:background-color .5s ease-in-out;
 		overflow:hidden;
 		cursor:pointer;
+        position:absolute;
 	}
 	body .main .circle .content{
 		display:none;
+        color:white;
+        overflow-y:auto;
+        height:600px;
+/*
+        position:relative;
+        top:-530px;
+        left:-580px;
+*/
 	}
 		body .main .circle .content .x{
-			color:white;
+			color:orange;
 			cursor:pointer;
 			z-index:100;
+            position:absolute;
+            top:-15px;
 		}
 		body .main .circle .content > p:first-of-type{
 			margin-top:60px;
 		}
-		body .main .circle .content p::selection, .content p a::selection, .content h4::selection{
+		body .main .circle .content p::selection, .content p a::selection, .content h2::selection{
 			background-color:white;
 			color:white;
 		}
@@ -86,43 +117,51 @@ body{
 			background-color:white;
 			color:white;
 		}
-	body .main #projects{
-		position:absolute;
-		left:calc(50% - 60px);
+	body .main .bottom_bar #projects{
 		background-image:url('../img/projects-closed.png');
+        left:calc(50% - 95px);
 	}
 		body .main #projects .content{
-			width:371px;
-			height:600px;
-			margin-left: -126px;
-			margin-top: -473px;
-			color:white;
-			overflow-y:auto;
+			
 		}
 			body .main #projects .content .project{
-				width:100%;
-
+				width:32%;
+                margin-right:2%;
+                float:left;
+                height:600px;
+                position:relative;
 			}
 				body .main #projects .content .project a img{
 					width:100%;
 				}
-				body .main #projects .content .project h4{
+				body .main #projects .content .project h2{
 					text-align:center;
 				}
 				body .main #projects .content .project p{
 					text-align:justify;
 				}
-			body .main #projects .content > h4 {
+                body .main #projects .content .project a{
+                    color:white;
+                    text-decoration:none;
+                }
+                    body .main #projects .content .project p a{
+                    color:white;
+                    text-decoration:underline;
+                    }
+			body .main #projects .content > h2 {
 				margin-top:20px;
 				text-align:center;
 			}
 	body .main #projects:hover{
 		background-image:url('../img/projects-open.png');
 	}
+    body .main #devlog{
+        background-image:url('../img/log-closed.png');
+        left:calc(50% - 25px);
+    }
 	body .main #contact{
-		position:absolute;
-		left:calc(50% + 10px);
 		background-image:url('../img/contact-closed.png');
+        left:calc(50% + 45px);
 	}
 		body .main #contact .content{
 			width:371px;

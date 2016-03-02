@@ -4,118 +4,51 @@
 	<head >
 		<title >rafal stapinski</title>
 		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu+Mono" />
-		<link type="text/css" rel="stylesheet" href="css/screen.css" />
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" ></script>
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
 	</head>
 	<body >
-		<img src="img/me.png" />
-		<h2 ><span >designer</span> &bull; <span >developer</span> &bull; <span >minimalist</span></h2>
-		<div class="main" >
-			<p >I'm a goal oriented person, and it's my goal to achieve what I put my mind to. What sets me aside from others is my ability to analyze a problem and come up with unique and elegant solutions.
-			<br />
-			<br />
-			I am currently enrolled in the Honors Program at Rutgers University where I study computer science and business.
-			<br />
-			<br />
-			For the past few years, I have applied my skills in web development as a freelance developer as well as an intern developer at Commvault.
-			<br />
-			<br />
-			I often take on side projects, as I enjoy the challenge of solving puzzles and making my ideas come to life.
-			<br />
-			<br />
-			If you're interested in hiring me, or just want to talk, get in touch below. 
-			</p>
-			<div class="bottom_bar" >
-				<div class="circle" id="projects" >
-					<div class="content" >
-						<span class="x" >&#x2715;</span>
-						<div class="project" >
-							<h4 >NewsMap</h4>
-							<a href="p/mapnews" >
-								<img src="img/map.png" />
-							</a>
-							<p >This interactive map categorizes news articles (currently from NYT) into conflict, economic, and environment related news. It then plots them on the map, based on the amount, and where, the articles were written.</p>
-						</div>
-						<h4 >more being added, soon</h4>
-					</div>
-
-				</div>
-				<div class="circle" id="contact" >
-					<div class="content" >
-						<div class="x" >&#x2715;</div>
-						<p >@ ......................... <a href="mailto:rafal@stapinski.co" >rafal@stapinski.co</a></p>
-						<p >t ............................ <a href="http://twitter.com/rafalstapinski" >@rafalstapinski</a></p>
-						<p >in ........................... <a href="https://www.linkedin.com/pub/rafal-stapinski/60/94b/182" >Rafal Stapinski</a></p>
-						<p >sk ................................ <a href="Skype:brewery.io" >brewery.io</a></p>
-						<p >git ............................... <a href="http://github.com/brewery-io" />brewery-io</a></p>
-						<p >btc ....... <a id="btc_a" href="#" >1ECaQNhJDvs1E2Y6DEEWdxRUy3Fn71KjUR</a></p>
-						<div id="btc_i" >
-							<div class="x" >&#x2715;</div>
-							<img src="img/btc.png" />
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<script >
-			$('#btc_i').hide();
-			$closed = true;
-			$('.circle').click(function() {
-				if ($closed) {
-					$closed = false;
-					$('.circle').hide();
-					$(this).show();
-					$(this).css({
-						'background-image': 'none',
-						'background-color': 'rgba(255,165,0,.98)',
-						'cursor': 'default'
-					});
-					$(this).children('.content').animate({
-						"margin-left": "+=1500px",
-						"margin-top": "+=1500px"
-					}).show();
-					$(this).animate({
-						"marginTop": "-=1500px",
-						"marginLeft": "-=1500px",
-						"height": "+=3000px",
-						"width": "+=3000px",
-						borderTopLeftRadius: 1500,
-						borderTopRightRadius: 1500,
-						borderBottomLeftRadius: 1500,
-						borderBottomRightRadius: 1500
-					});
-				}
-			});
-			$('.content > .x').click(function() {
-				$(this).parent().animate({
-					"margin-left": "-=1500px",
-					"margin-top": "-=1500px"
-				});
-				$(this).parent().parent().animate({
-					"marginTop": "+=1500px",
-					"marginLeft": "+=1500px",
-					"height": "-=3000px",
-					"width": "-=3000px",
-					borderTopLeftRadius: 25,
-					borderTopRightRadius: 25,
-					borderBottomLeftRadius: 25,
-					borderBottomRightRadius: 25
-				}, function() {
-					$('.circle').removeAttr('style');
-					$('circle').show();
-					$closed = true;
-					$('.content').hide();
-				});
-			});
-			$('#btc_a').click(function() {
-				$('#btc_i').show();
-			});
-
-			$('#btc_i > .x').click(function() {
-				$('#btc_i').hide();
-			});
-		</script>
+        <div class="top" >
+            <img class="me" src="img/newme.png" />
+            <h2 class="title" ><span >developer</span> &bull; <span >designer</span> &bull; <span >minimalist</span></h2>
+            <h3 class="menu" ><a href="#aboutme" >about me</a> &bull; <a href="#mydevlog" >my devlog</a> &bull; <a href="#myprojects" >my projects</a> &bull; <a href="#contactme" >contact me</a></h3>
+        </div>
+        <div class="main" id="aboutme">
+            <p >I'm a goal oriented person; this helps me break down the frequent logical and analytical problems that occur when programming. This is really just a complicated way to say I'm good at problem solving.
+                <br />
+                <br />
+                I am currently enrolled in the Honors Program at Rutgers University where I study computer science and finance.
+                <br />
+                <br />
+                For the past few years, I have applied my skills in web development as a freelance developer as well as an intern developer at Commvault.
+                <br />
+                <br />
+                I often take on side projects, as I enjoy the challenge of solving puzzles and making my ideas come to life. I'm currently working on a 3D exploration/thriller game; check out the dev log!
+                <br />
+                <br />
+                I enjoy landscape photography, billiards, debating existantialism, and browsing a multitude of subreddits.
+                <br />
+                <br />
+                If you're interested in hiring me, or just want to talk, you can contact me above. You can also find my <a href="res/Stapinski_Resume_March2015.pdf" >résumé by clicking here</a>.
+            </p>
+        </div>
+        <script >
+            $(window).on("load", function() {
+                var url = window.location.href;
+                var id = url.substring(url.lastIndexOf('#') + 1);
+                if (id == "aboutme" || id == "mydevlog" || id == "myprojects" || id == "contactme") {
+                    $(".main").load(id + ".html");
+                    $(".main").removeAttr("id").attr("id", id);
+                }
+            });
+            $(window).on("hashchange", function() {
+                var url = window.location.href;
+                var id = url.substring(url.lastIndexOf('#') + 1);
+                if (id == "aboutme" || id == "mydevlog" || id == "myprojects" || id == "contactme") {
+                    $(".main").load(id + ".html");
+                    $(".main").removeAttr("id").attr("id", id);
+                }
+            });
+        </script>
 	</body>
 </html>

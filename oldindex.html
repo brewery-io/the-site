@@ -1,0 +1,176 @@
+<!DOCTYPE html >
+
+<html >
+	<head >
+		<title >rafal stapinski</title>
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu+Mono" />
+		<link type="text/css" rel="stylesheet" href="css/screen.css" />
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" ></script>
+	</head>
+	<body >
+		<img src="img/newme.png" />
+        <h2 ><span >developer</span> &bull; <span >designer</span> &bull; <span >minimalist</span><div class="x" >x</div></h2>
+        <div class="container" >
+            <div class="main" >
+                <p >I'm a goal oriented person; this helps me break down the frequent logical and analytical problems that occur when programming. This is really just a complicated way to say I'm good at problem solving.
+                <br />
+                <br />
+                I am currently enrolled in the Honors Program at Rutgers University where I study computer science and finance.
+                <br />
+                <br />
+                For the past few years, I have applied my skills in web development as a freelance developer as well as an intern developer at Commvault.
+                <br />
+                <br />
+                I often take on side projects, as I enjoy the challenge of solving puzzles and making my ideas come to life. I'm currently working on a 3D exploration/thriller game; you can check out the dev log by clicking that middle button below.
+                <br />
+                <br />
+                    If you're interested in hiring me, or just want to talk, get in touch below by opening the envelope. If you want to see a list of some of my projects, open the folder below. You can find my <a href="res/Stapinski_Resume_March2015.pdf" >résumé by clicking here</a>.
+                </p>
+                <div class="bottom_bar" >
+                    <div class="circle" id="projects" >
+                        <div class="content" >
+                            <span class="x" >&#x2715;</span>
+                            <div class="project" >
+                                <a href="http://stapinski.com/devlog" >
+                                    <h2 >Game dev!</h2>
+                                    <p >In an effort to increase my knowledge in game development, artwork and design, and overall development skill, I've embarked on creating a 3D exploration/thriller game. In order to keep myself in check, I'm keeping a dev log, which you can find by clicking here.</p>
+                                </a>
+                            </div>
+                            <div class="project" >
+                                <h2 >1Deej</h2>
+                                <a href="http://devpost.com/software/hackru15f" >
+                                    <img src="img/1deej.png" />
+                                </a>
+                                <p > This is a project worked on during the Fall HackRU 2015. It allows listeners to text music suggestions (title, artist, album) to a DJ, who can then automatically add the suggestions onto their current playlist. Songs selections are currently limited to the Spotify library. This ended up winning 3rd place overall and best use of Twilio's API. Richard Murby covered it a bit in <a href="https://youtu.be/Ed-TrJE5_M8?t=6m16s" >this Devpost Commit commit video</a>. We're currently planning on polishing the app and releasing it. </p>
+                            </div>
+                            <div class="project" >
+                                <h2 >NewsMap</h2>
+                                <a href="p/mapnews" >
+                                    <img src="img/map.png" />
+                                </a>
+                                <p >This interactive map categorizes news articles (currently from NYT) into conflict, economic, and environment related news. It then plots them on the map, based on the amount, and where, the articles were written.</p>
+                            </div>
+
+                            <h2 >more being added soon,<br /> I promise</h2>
+                        </div>
+                    </div>
+                    <div class="circle" id="devlog" >
+
+                    </div>
+                    <div class="circle" id="contact" >
+                        <div class="content" >
+                            <div class="x" >&#x2715;</div>
+                            <p >@ ......................... <a href="mailto:rafal@stapinski.co" >rafal@stapinski.co</a></p>
+                            <p >in ........................... <a href="https://instagram.com/rafalstapinski" > @rafalstapinski</a></p>
+                            <p >git .......................... <a href="http://github.com/rafalstapinski" >@rafalstapinski</a></p>
+                            <p >btc ....... <a id="btc_a" href="#" >1ECaQNhJDvs1E2Y6DEEWdxRUy3Fn71KjUR</a></p>
+                            <div id="btc_i" >
+                                <div class="x" >&#x2715;</div>
+                                <img src="img/btc.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<script >
+			$('#btc_i').hide();
+            /*
+			$closed = true;
+			$('.circle').click(function() {
+				if ($closed) {
+					$closed = false;
+					$('.circle').hide();
+					$(this).show();
+					$(this).css({
+						'background-image': 'none',
+						'background-color': 'orange',
+						'cursor': 'default'
+					});
+					$(this).children('.content').animate({
+						"margin-left": "+=1500px",
+						"margin-top": "+=1500px"
+					}).show();
+					$(this).animate({
+						"marginTop": "-=1500px",
+						"marginLeft": "-=1500px",
+						"height": "+=3000px",
+						"width": "+=3000px",
+						borderTopLeftRadius: 1500,
+						borderTopRightRadius: 1500,
+						borderBottomLeftRadius: 1500,
+						borderBottomRightRadius: 1500
+					});
+				}
+			});
+			$('.content > .x').click(function() {
+				$(this).parent().animate({
+					"margin-left": "-=1500px",
+					"margin-top": "-=1500px"
+				});
+				$(this).parent().parent().animate({
+					"marginTop": "+=1500px",
+					"marginLeft": "+=1500px",
+					"height": "-=3000px",
+					"width": "-=3000px",
+					borderTopLeftRadius: 25,
+					borderTopRightRadius: 25,
+					borderBottomLeftRadius: 25,
+					borderBottomRightRadius: 25
+				}, function() {
+					$('.circle').removeAttr('style');
+					$('circle').show();
+					$closed = true;
+					$('.content').hide();
+				});
+			});
+            */
+            var open_element;
+            
+            $('.circle').click(function() {
+                open_element = $(this);
+                open(open_element);
+            });
+            
+            $('.x').click(function() {
+               alert(open_element.attr("id"));
+            });
+            
+            function open(open_element) {
+                $('.circle').hide();
+                open_element.show();
+                open_element.css({
+                    'background-image': 'none',
+                    'background-color': 'orange',
+                    'cursor': 'default'
+                });
+                open_element.animate({
+                    'marginTop': '-=1500px',
+					'marginLeft': '-=1500px',
+					'height': '+=3000px',
+					'width': '+=3000px',
+					borderTopLeftRadius: 1500,
+					borderTopRightRadius: 1500,
+					borderBottomLeftRadius: 1500,
+					borderBottomRightRadius: 1500
+                });
+                open_element.children().show();
+                open_element.children().animate({
+                    'margin-left': '+=1500px',
+                    'margin-top': '+=1500px'
+                });
+                
+            }
+            
+			$('#btc_a').click(function() {
+				$('#btc_i').show();
+			});
+
+			$('#btc_i > .x').click(function() {
+				$('#btc_i').hide();
+			});
+		</script>
+	</body>
+</html>
