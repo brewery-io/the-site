@@ -32,10 +32,8 @@ body .main {
   width:400px;
   height:100px;
   border:5px solid rgb(240, 240, 240);
-  position:absolute;
-  top:30%;
-  left:50%;
-  margin-left:-230px;
+  margin-top:30vh;
+  margin-left:calc(50% - 220px);
   padding:20px;
 }
 body .main h1 {
@@ -45,22 +43,19 @@ body .main h1 {
 }
 body .main p.one {
   color:rgb(230, 230, 230);
-  font-size:15px;
+  font-size:14px;
   text-align:center;
 }
 body .main p.two {
   color:rgb(230, 230, 230);
-  font-size:14px;
+  font-size:12px;
   text-align:center;
 }
 body .links {
   width:240px;
   height:40px;
-  position:absolute;
-  top:30%;
-  margin-top:170px;
-  left:50%;
-  margin-left:-120px;
+  margin-top:20px;
+  margin-left:calc(50% - 120px);
 }
 body .links a {
   display:block;
