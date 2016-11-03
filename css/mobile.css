@@ -1,0 +1,53 @@
+* {
+  margin:0px;
+  font-family: "Roboto Mono", monospace;
+}
+html {
+  height:100%;
+}
+body {
+  background: url(../img/bg_small.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.main {
+  margin-top:33vh;
+  border-top:1vw solid rgb(240, 240, 240);
+  border-bottom:1vw solid rgb(240, 240, 240);
+  padding-top:5vw;
+  padding-bottom:5vw;
+}
+.main h1 {
+  width:100%;
+  font-size:10.7vw;
+  text-align:center;
+  color:rgb(245, 245, 245);
+}
+.main .one {
+  font-size:3.4vw;
+  text-align:center;
+  color:rgb(240, 240, 240);
+}
+.main .two {
+  font-size:2.9vw;
+  text-align:center;
+  color:rgb(240, 240, 240);
+}
+.links {
+  width:100%;
+  margin-top:10vw;
+}
+.links a {
+  display:block;
+  float:left;
+  margin-left:2.5%;
+  margin-right:2.5%;
+  width:20%;
+  height:20vw;
+}
+.links a img {
+  width:100%;
+  height:100%;
+}
