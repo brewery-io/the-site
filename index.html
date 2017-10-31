@@ -1,41 +1,88 @@
 <!DOCTYPE html >
-<html lang='en' >
+
+<html lang="en" >
   <head >
     <title >Rafal Stapinski</title>
-    <meta name='description' content='Rafal Stapinski' />
-    <meta name='title' content='Rafal Stapinski' />
-    <meta name='author' content='Rafal Stapinski' />
-    <meta charset='UTF-8' />
-    <meta http-equiv='Cache-Control' content='max-age=300' />
+    <meta name="description" content="Rafal Stapinski" />
+    <meta name="title" content="Rafal Stapinski" />
+    <meta name="author" content="Rafal Stapinski" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="max-age=300" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Mono'  />
-    <link rel='stylesheet' type='text/css' href='css/screen.css' media="only screen and (min-device-width:481px)" />
-    <link rel="stylesheet" href="css/mobile.css" media="only screen and (max-device-width:480px)"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu"  />
+    <link rel="stylesheet" type="text/css" href="css/screen.css" media="only screen and (min-device-width:481px)" />
+    <link rel="stylesheet" type="text/css" href="css/mobile.css" media="only screen and (max-device-width:480px)" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" > </script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js" ></script>
   </head>
   <body >
-    <div class='main fade-in' >
-      <p class='one' >
-        Hi, I hope you're having a good day. My name's
-      </p>
-      <h1 >rafal stapinski</h1>
-      <p class='two' >
-        and I'm a developer, designer, and casual photographer.
-      </p>
+    <div class="main" id="main" >
+      <div class="front" >
+        <img src="img/propic.jpg" />
+        <h1 >Rafal Stapinski</h1>
+        <h3 >I am a
+          <a href="https://github.com/rafalstapinski">software developer</a>
+          and
+          <a href="https://instagram.com/stahpinski" >amateur photographer</a>
+        </h3>
+        <div class="links" >
+          <img src="img/projects.svg" id="projects" />
+          <img src="img/experience.svg" id="experience" />
+          <a href="res/Stapinski_Rafal_Resume_Latest.pdf" >
+            <img src="img/resume.svg" id="resume" />
+          </a>
+        </div>
+      </div>
+      <div class="back" >
+        <div class="project_wrapper" >
+          <div class="header" >
+            <img src="img/projects.svg" />
+            <h2 >Projects</h2>
+          </div>
+          <div class="project_list" >
+            projects go here
+          </div>
+          <img src="img/home.svg" class="home" />
+        </div>
+        <div class="experience_wrapper" >
+          <div class="header" >
+            <img src="img/experience.svg" />
+            <h2 >Experience</h2>
+          </div>
+          <div class="project_list" >
+            projects go here
+          </div>
+          <img src="img/home.svg" class="home" />
+        </div>
+      </div>
     </div>
-    <div class='links fade-in' >
-      <a href='https://github.com/rafalstapinski' >
-        <img src='img/github.svg' width='40px' height='40px' alt='https://github.com/rafalstapinski' />
-      </a>
-      <a href='https://instagram.com/stahpinski' >
-        <img src='img/instagram.svg' width='40px' height='40px' alt='https://instagram.com/stahpinski' />
-      </a>
-      <a href='https://linkedin.com/in/rafalstapinski' >
-        <img src='img/linkedin.svg' width='40px' height='40px' alt='https://linkedin.com/in/rafalstapinski' />
-      </a>
-      <a href='mailto:rafal@stapinski.co' >
-        <img src='img/mail.svg' width='40px' height='40px' alt='rafal@stapinski.co' />
-      </a>
-    </div>
+    <script >
+      $('#main').flip({axis: 'x', trigger: 'manual'})
+      $('#projects').click(() => {
+        $('.project_wrapper').show()
+        $('.experience_wrapper').hide()
+        $('.back').addClass('projects')
+        $('.back').removeClass('experience')
+        $('#main').flip(true)
+      })
+      $('#experience').click(() => {
+        $('.project_wrapper').hide()
+        $('.experience_wrapper').show()
+        $('.back').removeClass('projects')
+        $('.back').addClass('experience')
+        $('#main').flip(true)
+      })
+      $('.home').click(() => {
+        $('#main').flip(false)
+      })
+      $(document).ready(() => {
+        $('.front').css('transform', 'rotateX(0)')
+        $('.front').css('-moz-transform', 'rotateX(0)')
+        $('.front').css('-webkit-transform', 'rotateX(0)')
+        $('.front').css('opacity', '1')
+      })
+    </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
