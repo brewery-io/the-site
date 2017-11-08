@@ -22,7 +22,7 @@ body .main {
 body .main .front {
   border-radius:5px;
   opacity:.8;
-  background-color:rgba(243, 253, 254, .95);
+  background-color:rgba(243, 253, 254, .9);
   transform:rotateX(20deg);
   -o-transform:rotateX(20deg);
   -moz-transform:rotateX(20deg);
@@ -107,7 +107,7 @@ body .main .experience_wrapper {
 }
 body .main .project_wrapper {
   width:600px;
-  height:600px;
+  height:630px;
   margin-left:-125px;
   background-color:rgba(243, 253, 254, .95);
   border-radius:5px;
@@ -144,14 +144,15 @@ body .main .project_wrapper .project_list span {
   margin-bottom:15px;
 }
 body .main .project_wrapper .project_list span h3 {
+  color:rgba(227, 180, 173, 1);
   margin-bottom:5px;
 }
 body .main .project_wrapper .project_list span a {
   text-decoration:none;
-  color:rgba(53, 105, 160, .9);
+  color:rgba(227, 180, 173, .8);
 }
 body .main .project_wrapper .project_list span a:hover {
-  color:rgba(53, 105, 160, 1);
+  color:rgba(227, 180, 173, 1);
 }
 body .main .project_wrapper .project_list span p {
   margin-bottom:15px;
@@ -198,10 +199,10 @@ body .main .experience_wrapper .experience_list span h5 {
 }
 body .main .experience_wrapper .experience_list span a {
   text-decoration:none;
-  color:rgba(53, 105, 160, .9);
+  color:rgba(227, 180, 173, .8);
 }
 body .main .experience_wrapper .experience_list span a:hover {
-  color:rgba(53, 105, 160, 1);
+  color:rgba(227, 180, 173, 1);
 }
 body .main .experience_wrapper .experience_list span p {
   margin-bottom:15px;

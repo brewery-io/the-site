@@ -42,22 +42,37 @@
           </div>
           <div class="project_list" >
             <span >
-              <a href="https://github.com/rafalstapinski/news-map" ><h3 >News Map</h3></a>
+              <a href="https://github.com/rafalstapinski/news-map" >
+                <h3 >News Map</h3>
+              </a>
               <p >
-                The News Map aims to visually display articles on a world map.
-                The more a location is written about, the more prominently it
-                appears on the map. In the works is a language processor that
-                can also categorize the articles into categories such as
-                environmental, economical, or political.
+                The News Map visually displays news articles on a world map.
+                Articles are categorized by a learning model written using
+                SKLearn in Python. They can also be filtered by country,
+                administrative level, and locality.
               </p>
             </span>
             <span >
-              <a href="https://github.com/rafalstapinski/foot-traffic" ><h3 >Foot traffic analysis</h3></a>
+              <a href="https://github.com/rafalstapinski/foot-traffic" >
+                <h3 >Foot traffic analysis</h3>
+              </a>
               <p >
                 I collected foot traffic data using the Foursquare API for
-                a handful of restaurant chains. I am correlating the traffic
-                data with earnings from Q3 and using that to predict earnings
-                for Q4.
+                a handful of restaurant chains. I am using different
+                models to correlate foot traffic with quarterly earnings to
+                predict future revenues and stock trends.
+              </p>
+            </span>
+            <span >
+              <a href="https://github.com/rafalstapinski/ultimate-tic-tac-toe" >
+                <h3 >Ultimate Tic-Tac-Toe</h3>
+              </a>
+              <p >
+                This is an in browser game offering a twist on the classic
+                game of Tic-Tac-Toe. A multiplayer option is available by sharing
+                a link with your opponent. Three levels of opponent AI are also
+                provided. They include an easy AI that moves randomly, a naive
+                minimax algorithm, and a more advanced Monte Carlo tree search.
               </p>
             </span>
             <span >
@@ -72,19 +87,13 @@
               </p>
             </span>
             <span >
-              <a href="https://github.com/rafalstapinski/filters" ><h3 >Image filters</h3></a>
+              <a href="https://github.com/rafalstapinski/filters" >
+                <h3 >Image filters</h3>
+              </a>
               <p >
                 In this library, I break down popular image filters, such as the
                 sobel edge detection filter and the gaussian blur filter using
                 Python.
-              </p>
-            </span>
-            <span >
-              <a href="https://github.com/rafalstapinski/ultimate-tic-tac-toe" ><h3 >Ultimate Tic-Tac-Toe</h3></a>
-              <p >
-                This is a fun in browser two player game. It is a version of
-                tic-tac-toe I would often play with friends in high school. To
-                play, just share the link with a friend and enjoy.
               </p>
             </span>
           </div>
@@ -96,32 +105,37 @@
           </div>
           <div class="experience_list" >
             <span >
-              <a href="https://simulmedia.com" ><h3 >Simulmedia - Summer 2017</h3></a>
+              <a href="https://simulmedia.com" >
+                <h3 >Simulmedia - Summer 2017</h3>
+              </a>
               <h5 >
                 Television ad-tech company focused on audience targeting and backed by USV.
               </h5>
               <p >
                 I spent the Summer at Simulmedia as an Engineering Intern where
-                I learned about and worked on creating software to work with and
-                scale with large data models and constantly changing . My project revolved around
-                translating television ad campaigns into campaigns that could
-                target and increase specific goal metrics, such as website
-                visits.
+                I learned about and worked on creating features to work with
+                large data. My project revolved around translating television
+                ad campaigns into campaigns that could target and increase
+                specific goal metrics, such as website visits.
               </p>
             </span>
             <span >
-              <a href="https://arcanereality.com" ><h3 >Arcane Reality - Spring 2017</h3></a>
+              <a href="https://arcanereality.com" >
+                <h3 >Arcane Reality - Spring 2017</h3>
+              </a>
               <h5 >
                 Virtual reality video game and experiences startup.
               </h5>
               <p >
                 I worked with recent Rutgers graduates during my Spring semester
                 as a Software Development Intern focusing on feature development
-                in Unity for Virtual Reality video games.
+                in Unity for a Virtual Reality video game.
               </p>
             </span>
             <span >
-              <a href="https://commvault.com" ><h3 >Commvault - Summer 2016</h3></a>
+              <a href="https://commvault.com" >
+                <h3 >Commvault - Summer 2016</h3>
+              </a>
               <h5 >
                 Enterprise-level data backup and security company.
               </h5>
@@ -129,13 +143,15 @@
                 During my second summer at Commvault I worked inside the SaaS
                 team where I learned about what it takes to distribute workloads
                 across many virtual machines in an effort to scale a Software
-                as a Service. I worked on creating a change management service
-                for virtual machines to track deployed software, versions, and
+                as a Service. I created a change management service for
+                virtual machines to track deployed software, versions, and
                 scaling.
               </p>
             </span>
             <span >
-              <a href="https://commvault.com" ><h3 >Commvault - Summer 2016</h3></a>
+              <a href="https://commvault.com" >
+                <h3 >Commvault - Summer 2016</h3>
+              </a>
               <p >
                 During my first internship I worked as a Software Engineering
                 Intern where I built several tools for the Commvault suite of
@@ -148,30 +164,37 @@
       </div>
     </div>
     <script >
-      $('#main').flip({axis: 'x', trigger: 'manual'})
-      $('#projects').click(() => {
-        $('.project_wrapper').show()
-        $('.experience_wrapper').hide()
-        $('.back').addClass('projects')
-        $('.back').removeClass('experience')
-        $('#main').flip(true)
-      })
-      $('#experience').click(() => {
-        $('.project_wrapper').hide()
-        $('.experience_wrapper').show()
-        $('.back').removeClass('projects')
-        $('.back').addClass('experience')
-        $('#main').flip(true)
-      })
-      $('.home').click(() => {
-        $('#main').flip(false)
-      })
-      $(document).ready(() => {
-        $('.front').css('transform', 'rotateX(0)')
-        $('.front').css('-moz-transform', 'rotateX(0)')
-        $('.front').css('-webkit-transform', 'rotateX(0)')
-        $('.front').css('opacity', '1')
-      })
+
+     const width = (window.innerWidth > 0) ? window.innerWidth : screen.width
+
+     if (width > 480) {
+       $('#main').flip({axis: 'x', trigger: 'manual'})
+       $('#projects').click(() => {
+         $('.project_wrapper').show()
+         $('.experience_wrapper').hide()
+         $('.back').addClass('projects')
+         $('.back').removeClass('experience')
+         $('#main').flip(true)
+       })
+       $('#experience').click(() => {
+         $('.project_wrapper').hide()
+         $('.experience_wrapper').show()
+         $('.back').removeClass('projects')
+         $('.back').addClass('experience')
+         $('#main').flip(true)
+       })
+       $('.home').click(() => {
+         $('#main').flip(false)
+       })
+       $(document).ready(() => {
+         $('.front').css('transform', 'rotateX(0)')
+         $('.front').css('-moz-transform', 'rotateX(0)')
+         $('.front').css('-webkit-transform', 'rotateX(0)')
+         $('.front').css('opacity', '1')
+       })
+     }
+
+
     </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
